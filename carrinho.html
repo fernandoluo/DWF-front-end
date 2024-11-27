@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+    <link rel="stylesheet" href="carrinho.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>DWF Multistore</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="site.html">Home</a></li>
+                <li><a href="produto.html">Produtos</a></li>
+                <li><a href="login.html">Login/Cadastro</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="carrinho">
+        <h2>Seu Carrinho de Compras</h2>
+        <div id="carrinho-container">
+            <div class="carrinho-item">
+                <img src="mcqueen.png" alt="Mcqueen Carros">
+                <div class="carrinho-item-info">
+                    <h2>Mcqueen Carros</h2>
+                    <p>Preço: R$ 99,90</p>
+                </div>
+            </div>
+            <div class="carrinho-item">
+                <img src="boneca.png" alt="Boneca">
+                <div class="carrinho-item-info">
+                    <h2>Boneca</h2>
+                    <p>Preço: R$ 79,90</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="total-container">
+            <div class="subtotal-box">
+                <h3>Subtotal: R$ 179,80</h3>
+            </div>
+            <div class="button-container"> <!-- Adiciona um contêiner para os botões -->
+                <button onclick="finalizarCompra()">Finalizar Compra</button>
+                <button onclick="window.location.href='index.html#produtos'">Continuar Comprando</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 DWF Multistore - Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function finalizarCompra() {
+            alert("Compra finalizada com sucesso!");
+        }
+    </script>
+</body>
+</html>
