@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Loja</title>
+    <link rel="stylesheet" href="site.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <h1>DWF Multistore</h1>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar...">
+            <button>Buscar</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="produto.html">Produtos</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+                <li><a href="login.html">Login/Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Carrossel -->
+    <section class="banner" id="home">
+        <div class="carousel">
+            <div class="carousel-item active">
+                <img src="banner.png" alt="Promoção Especial 1">
+            </div>
+            <div class="carousel-item">
+                <img src="mcqueen.png
+                    " alt="Promoção Especial 2">
+            </div>
+            <div class="carousel-item">
+                <img src="boneca.png" alt="Promoção Especial 3">
+            </div>
+            <button class="carousel-control prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="carousel-control next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- Produtos -->
+    <section class="produtos" id="produtos">
+        <h2>Destaques</h2>
+        <div class="produtos-grid">
+            <div class="produto-item">
+                <img src="mcqueen.png" alt="Produto 1">
+                <h3>Mcqueen carros</h3>
+                <p>R$ 99,90</p>
+                <button onclick="adicionarAoCarrinho('Mcqueen carros')">Comprar</button>
+            </div>
+            <div class="produto-item">
+                <img src="boneca.png" alt="Produto 2">
+                <h3>Boneca</h3>
+                <p>R$ 79,90</p>
+                <button onclick="adicionarAoCarrinho('Boneca')">Comprar</button>
+            </div>
+            <div class="produto-item">
+                <img src="arma.png" alt="Produto 3">
+                <h3>Pistola nerf</h3>
+                <p>R$ 69,90</p>
+                <button onclick="adicionarAoCarrinho('Pistola nerf')">Comprar</button>
+            </div>
+            <div class="produto-item">
+                <img src="celular.png" alt="Produto 4">
+                <h3>Buba celular</h3>
+                <p>R$ 24,90</p>
+                <button onclick="adicionarAoCarrinho('Buba celular')">Comprar</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 DWF Multistore - Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        
+        function adicionarAoCarrinho(produto) {
+            window.location.href = `carrinho.html?produto=${produto}`;
+        }
+
+       
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-item');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+        }
+
+        function moveSlide(direction) {
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>
