@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forma de Pagamento</title>
+    <link rel="stylesheet" href="pagamento.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>DWF Multistore</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="site.html">Home</a></li>
+                <li><a href="produto.html">Produtos</a></li>
+                <li><a href="login.html">Login/Cadastro</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="pagamento-container">
+        <h2>Escolha sua Forma de Pagamento</h2>
+        <button class="pagseguro-btn" onclick="selecionarPagSeguro()">Selecionar PagSeguro</button>
+        <h3>Pagamento via QR Code</h3>
+        <div class="qr-code">
+            <img src="qrcode.png" alt="QR Code de pagamento" width="200">
+            <div class="codigo-qr">
+                Código do QR Code: <strong>(19)98133-2159</strong>
+            </div>
+        </div>
+        <div class="button-container">
+            <!-- Atualizado para redirecionar para a página de pagamento finalizado -->
+            <button onclick="avancar()">Avançar</button>
+            <button onclick="window.location.href='carrinho.html'">Voltar</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 DWF Multistore - Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function selecionarPagSeguro() {
+            alert("PagSeguro selecionado como forma de pagamento!");
+        }
+
+        function avancar() {
+            alert("Redirecionando para a página de pagamento finalizado...");
+            // Alterado para redirecionar para a página 'realizado.html' 
+            window.location.href = "realizado.html"; 
+        }
+    </script>
+</body>
+</html>
