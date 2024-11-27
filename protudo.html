@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+    <link rel="stylesheet" href="produto.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>DWF Multistore</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="site.html">Home</a></li>
+                <li><a href="produto.html">Produtos</a></li>
+                <li><a href="login.html">Login/Cadastro</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="carrinho">
+        <h2>PRODUTOS</h2>
+        <div id="carrinho-container">
+            <div class="carrinho-item">
+                <img src="mcqueen.png" alt="Mcqueen Carros">
+                <div class="carrinho-item-info">
+                    <h2>Mcqueen Carros</h2>
+                    <p>Preço: R$ 99,90</p>
+                    <button onclick="adicionarAoCarrinho('mcqueen')">Comprar</button>
+                </div>
+            </div>
+
+            <div class="carrinho-item">
+                <img src="boneca.png" alt="Boneca">
+                <div class="carrinho-item-info">
+                    <h2>Boneca</h2>
+                    <p>Preço: R$ 79,90</p>
+                    <button onclick="adicionarAoCarrinho('boneca')">Comprar</button>
+                </div>
+            </div>
+
+            <div class="carrinho-item">
+                <img src="arma.png" alt="Pistola nerf">
+                <div class="carrinho-item-info">
+                    <h2>Pistola Nerf</h2>
+                    <p>Preço: R$ 69,90</p>
+                    <button onclick="adicionarAoCarrinho('Pistola Nerf')">Comprar</button>
+                </div>
+            </div>
+
+            <div class="carrinho-item">
+                <img src="celular.png" alt="Buba celular">
+                <div class="carrinho-item-info">
+                    <h2>Buba Celular</h2>
+                    <p>Preço: R$ 24,90</p>
+                    <button onclick="adicionarAoCarrinho('Buba Celular')">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 DWF Multistore - Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        function adicionarAoCarrinho(produto) {
+            window.location.href = `carrinho.html?produto=${produto}`;
+        }
+    </script>
+</body>
+</html>
